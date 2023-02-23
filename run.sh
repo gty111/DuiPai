@@ -1,3 +1,4 @@
+[ ! -d log ] && mkdir log
 g++ ac.cpp -o ac
 if [ $? -ne 0 ] ; then
     return

@@ -1,5 +1,11 @@
 g++ ac.cpp -o ac
+if [ $? -ne 0 ] ; then
+    return
+fi
 g++ wa.cpp -o wa
+if [ $? -ne 0 ] ; then
+    return
+fi
 g++ data.cpp -o data
 while [ $? -eq 0 ]
 do
@@ -9,3 +15,4 @@ do
     ./wa < data.output > wa.output
     diff ac.output wa.output
 done
+

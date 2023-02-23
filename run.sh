@@ -10,9 +10,9 @@ g++ data.cpp -o data
 while [ $? -eq 0 ]
 do
     echo "..."
-    ./data > data.output
-    ./ac < data.output > ac.output
-    ./wa < data.output > wa.output
-    diff ac.output wa.output
+    ./data > log/data.output
+    ./ac < log/data.output > log/ac.output
+    ./wa < log/data.output > log/wa.output
+    diff log/ac.output log/wa.output
 done
 
